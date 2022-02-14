@@ -15,7 +15,6 @@ return require('packer').startup(function()
   use 'kyazdani42/nvim-web-devicons'
   use 'lewis6991/gitsigns.nvim' 
 
-  use 'nvim-treesitter/nvim-treesitter'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-surround'
   use 'tpope/vim-commentary'
@@ -26,14 +25,63 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
 
-  -- autocomplete 
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
+  use {'neoclide/coc.nvim', branch = 'release'}
+  use 'rbgrouleff/bclose.vim'
+  use 'francoiscabrol/ranger.vim'
+  use "nvim-lua/popup.nvim"
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    },
+    config = function() require'nvim-tree'.setup {} end
+  }
+  use 'preservim/nerdtree'
+  use {
+  "ahmedkhalf/project.nvim",
+    config = function()
+      require("project_nvim").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  } 
+	use {'junegunn/fzf.vim'}
+-- Lua
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup {
+        plugins = {
+            marks = true, -- shows a list of your marks on ' and `
+            registers = false, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
+            spelling = {
+              enabled = false, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
+              suggestions = 20, -- how many suggestions should be shown in the list?
+            }
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    }
+  end
+  }
+  use 'tmhedberg/SimpylFold'
+  use {
+    'yaegassy/coc-volar',
+    run='yarn install --frozen-lockfile'
+  }
+  use 'mattn/emmet-vim'
+
+  -- use 'hrsh7th/cmp-nvim-lsp'
+  -- use 'hrsh7th/cmp-buffer'
+  -- use 'hrsh7th/cmp-path'
+  -- use 'hrsh7th/cmp-cmdline'
+  -- use 'hrsh7th/nvim-cmp'
 
   -- lua snip
-  use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
+  --use 'L3MON4D3/LuaSnip'
+  --use 'saadparwaiz1/cmp_luasnip'
 end)
+
