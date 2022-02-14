@@ -36,6 +36,7 @@ return require('packer').startup(function()
     },
     config = function() require'nvim-tree'.setup {} end
   }
+  use 'ryanoasis/vim-devicons'
   use 'preservim/nerdtree'
   use {
   "ahmedkhalf/project.nvim",

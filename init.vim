@@ -67,7 +67,7 @@ nmap <silent> gr <Plug>(coc-references)
 " xmap <leader>f  <Plug>(coc-format-selected)
 " nmap <leader>f  <Plug>(coc-format-selected)
 nnoremap <leader>qf :lua vim.diagnostic.setqflist()<cr>
-nnoremap <leader>e :NerdTreeTreeToggle<CR>
+nnoremap <leader>e :NERDTreeToggle<CR>
 " nnoremap <leader>r :NvimTreeRefresh<CR>
 " nnoremap <leader>n :NvimTreeFindFile<CR>
 " autocmd FileType python set foldmethod=expr
