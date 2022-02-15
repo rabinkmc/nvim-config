@@ -48,7 +48,7 @@ return require('packer').startup(function()
       }
     end
   } 
-	use {'junegunn/fzf.vim'}
+  use {'junegunn/fzf', run= 'fzf#install()'}
 -- Lua
   use {
     "folke/which-key.nvim",
@@ -74,6 +74,7 @@ return require('packer').startup(function()
     run='yarn install --frozen-lockfile'
   }
   use 'mattn/emmet-vim'
+  use 'rking/ag.vim'
 
   -- use 'hrsh7th/cmp-nvim-lsp'
   -- use 'hrsh7th/cmp-buffer'

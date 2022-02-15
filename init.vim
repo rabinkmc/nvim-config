@@ -30,6 +30,7 @@ lua require('telescope').load_extension('projects')
 "lua require('pythonlsp')
 
 set completeopt=menu,menuone,noselect
+set clipboard=unnamedplus
 " set clipboard=unnamedplus
 set mouse=a
 "setlocal spell spelllang=en_us
@@ -45,6 +46,7 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 " nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fo <cmd>Telescope oldfiles<cr>
+nnoremap <leader>fm <cmd>Telescope marks<cr>
 nnoremap <leader>pp <cmd>Telescope projects<cr>
 
 " nnoremap <leader>dq <cmd>lua vim.lsp.diagnostic.set_qflist()<CR> 
@@ -67,7 +69,6 @@ nmap <silent> gr <Plug>(coc-references)
 " xmap <leader>f  <Plug>(coc-format-selected)
 " nmap <leader>f  <Plug>(coc-format-selected)
 nnoremap <leader>qf :lua vim.diagnostic.setqflist()<cr>
-nnoremap <leader>e :NERDTreeToggle<CR>
 " nnoremap <leader>r :NvimTreeRefresh<CR>
 " nnoremap <leader>n :NvimTreeFindFile<CR>
 " autocmd FileType python set foldmethod=expr
@@ -82,4 +83,11 @@ function! s:show_documentation()
   endif
 endfunction
 let g:ranger_map_keys = 0
-nnoremap <localleader>f :Ranger<CR>
+nnoremap <localleader>n :NERDTree<cr>
+nnoremap <localleader>r :NERDTreeFind<cr>
+nnoremap <leader>e :NERDTreeToggle<CR>
+nnoremap <localleader>f :Ranger<cr>
+
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+vnoremap <localleader>f  <Plug>(coc-format-selected)
+nnoremap <localleader>f  <Plug>(coc-format-selected)
