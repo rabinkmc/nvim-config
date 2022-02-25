@@ -1,6 +1,12 @@
-require("null-ls").setup({
+local null_ls = require("null-ls")
+
+local diagnostics = null_ls.builtins.diagnostics
+local formatting = null_ls.builtins.formatting
+
+null_ls.setup({
     sources = {
-        require("null-ls").builtins.diagnostics.flake8,
-        require("null-ls").builtins.diagnostics.eslint
+        diagnostics.flake8,
+        diagnostics.eslint,
+        formatting.black
     },
 })

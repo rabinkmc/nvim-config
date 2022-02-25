@@ -69,6 +69,12 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0" },
+    loaded = true,
+    path = "/home/rabin/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   SimpylFold = {
     loaded = true,
     path = "/home/rabin/.local/share/nvim/site/pack/packer/start/SimpylFold",
@@ -83,11 +89,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rabin/.local/share/nvim/site/pack/packer/start/bclose.vim",
     url = "https://github.com/rbgrouleff/bclose.vim"
-  },
-  ["coc-volar"] = {
-    loaded = true,
-    path = "/home/rabin/.local/share/nvim/site/pack/packer/start/coc-volar",
-    url = "https://github.com/yaegassy/coc-volar"
   },
   ["coc.nvim"] = {
     loaded = true,
@@ -140,6 +141,11 @@ _G.packer_plugins = {
     path = "/home/rabin/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-ts-context-commentstring"] = {
+    loaded = true,
+    path = "/home/rabin/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
+    url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/rabin/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -171,20 +177,35 @@ _G.packer_plugins = {
     path = "/home/rabin/.local/share/nvim/site/pack/packer/start/ranger.vim",
     url = "https://github.com/francoiscabrol/ranger.vim"
   },
+  ["telescope-coc.nvim"] = {
+    loaded = true,
+    path = "/home/rabin/.local/share/nvim/site/pack/packer/start/telescope-coc.nvim",
+    url = "https://github.com/fannheyward/telescope-coc.nvim"
+  },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/home/rabin/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/rabin/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/rabin/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ultisnips = {
+    loaded = true,
+    path = "/home/rabin/.local/share/nvim/site/pack/packer/start/ultisnips",
+    url = "https://github.com/SirVer/ultisnips"
+  },
   vim = {
     loaded = true,
     path = "/home/rabin/.local/share/nvim/site/pack/packer/start/vim",
     url = "https://github.com/dracula/vim"
-  },
-  ["vim-commentary"] = {
-    loaded = true,
-    path = "/home/rabin/.local/share/nvim/site/pack/packer/start/vim-commentary",
-    url = "https://github.com/tpope/vim-commentary"
   },
   ["vim-devicons"] = {
     loaded = true,
@@ -196,13 +217,17 @@ _G.packer_plugins = {
     path = "/home/rabin/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-snippets"] = {
+    loaded = true,
+    path = "/home/rabin/.local/share/nvim/site/pack/packer/start/vim-snippets",
+    url = "https://github.com/honza/vim-snippets"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "/home/rabin/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
   },
   ["which-key.nvim"] = {
-    config = { "\27LJ\2\né\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\fplugins\1\0\0\rspelling\1\0\2\fenabled\1\16suggestions\3\20\1\0\2\14registers\1\nmarks\2\nsetup\14which-key\frequire\0" },
     loaded = true,
     path = "/home/rabin/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
@@ -214,14 +239,14 @@ time([[Defining packer_plugins]], false)
 time([[Config for project.nvim]], true)
 try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17project_nvim\frequire\0", "config", "project.nvim")
 time([[Config for project.nvim]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
+time([[Config for Comment.nvim]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0", "config", "nvim-tree.lua")
 time([[Config for nvim-tree.lua]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\né\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\fplugins\1\0\0\rspelling\1\0\2\fenabled\1\16suggestions\3\20\1\0\2\14registers\1\nmarks\2\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
 if should_profile then save_profiles() end
 
 end)

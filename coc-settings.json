@@ -1,3 +1,11 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "vue", "html", "javascript", "json"]
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "vue",
+    "html",
+    "javascript",
+    "json"
+  ],
+  "python.analysis.autoImportCompletions": true
 }

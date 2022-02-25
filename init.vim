@@ -25,6 +25,8 @@ lua require('plugins')
 lua require('linter')
 "lua require('nvim_tree')
 lua require('telescope').load_extension('projects')
+lua require('telescope').load_extension('fzf')
+lua require('telescope').load_extension('coc')
 "lua require('lsp')
 "lua require('completion')
 "lua require('pythonlsp')
@@ -41,7 +43,8 @@ nnoremap <leader>vr :e $MYVIMRC<cr>
 command Plug :e ~/.config/nvim/lua/plugins.lua
 
 " Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>ff <cmd>Telescope git_files<cr>
+nnoremap <c-p> <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 " nnoremap <leader>fh <cmd>Telescope help_tags<cr>
@@ -65,6 +68,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+nmap <leader>rn <Plug>(coc-rename)
 
 " xmap <leader>f  <Plug>(coc-format-selected)
 " nmap <leader>f  <Plug>(coc-format-selected)
@@ -84,10 +88,14 @@ function! s:show_documentation()
 endfunction
 let g:ranger_map_keys = 0
 nnoremap <localleader>n :NERDTree<cr>
-nnoremap <localleader>r :NERDTreeFind<cr>
+nnoremap <localleader>f :NERDTreeFind<cr>
 nnoremap <leader>e :NERDTreeToggle<CR>
-nnoremap <localleader>f :Ranger<cr>
+nnoremap <localleader>r :Ranger<cr>
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 vnoremap <localleader>f  <Plug>(coc-format-selected)
 nnoremap <localleader>f  <Plug>(coc-format-selected)
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+nnoremap <leader>tgc :Telescope git_commits<cr>
+nnoremap <leader>tcc :Telescope commands<cr>

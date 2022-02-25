@@ -17,7 +17,7 @@ return require('packer').startup(function()
 
   use 'tpope/vim-fugitive'
   use 'tpope/vim-surround'
-  use 'tpope/vim-commentary'
+  -- use 'tpope/vim-commentary'
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'nvim-telescope/telescope.nvim'
   use 'dracula/vim'
@@ -50,32 +50,23 @@ return require('packer').startup(function()
   } 
   use {'junegunn/fzf', run= 'fzf#install()'}
 -- Lua
-  use {
-    "folke/which-key.nvim",
-    config = function()
-      require("which-key").setup {
-        plugins = {
-            marks = true, -- shows a list of your marks on ' and `
-            registers = false, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
-            spelling = {
-              enabled = false, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
-              suggestions = 20, -- how many suggestions should be shown in the list?
-            }
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
-    }
-  end
-  }
   use 'tmhedberg/SimpylFold'
-  use {
-    'yaegassy/coc-volar',
-    run='yarn install --frozen-lockfile'
-  }
   use 'mattn/emmet-vim'
   use 'rking/ag.vim'
+  use 'SirVer/ultisnips'
+  use 'honza/vim-snippets'
+  use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+  }
+  use "JoosepAlviste/nvim-ts-context-commentstring"
+  use { 'folke/which-key.nvim' }
+  use { 'folke/tokyonight.nvim' }
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
+  use 'fannheyward/telescope-coc.nvim'
   -- use 'hrsh7th/cmp-nvim-lsp'
   -- use 'hrsh7th/cmp-buffer'
   -- use 'hrsh7th/cmp-path'
