@@ -67,6 +67,9 @@ return require('packer').startup(function()
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
   use 'fannheyward/telescope-coc.nvim'
+  use 'tpope/vim-dispatch'
+  use 'vim-test/vim-test'
+  use 'vim-airline/vim-airline'
   -- use 'hrsh7th/cmp-nvim-lsp'
   -- use 'hrsh7th/cmp-buffer'
   -- use 'hrsh7th/cmp-path'

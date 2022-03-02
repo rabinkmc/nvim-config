@@ -99,3 +99,7 @@ xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 nnoremap <leader>tgc :Telescope git_commits<cr>
 nnoremap <leader>tcc :Telescope commands<cr>
+
+"error format python  
+autocmd FileType python set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+let test#strategy="dispatch"
