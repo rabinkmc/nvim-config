@@ -89,10 +89,10 @@ nnoremap <localleader>f :NERDTreeFind<cr>
 nnoremap <leader>e :NERDTreeToggle<CR>
 nnoremap <localleader>r :Ranger<cr>
 
-vnoremap <localleader>cf  <Plug>(coc-format-selected)
-nnoremap <localleader>cf  <Plug>(coc-format-selected)
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+" vnoremap <localleader>cf  <Plug>(coc-format-selected)
+" nnoremap <localleader>cf  <Plug>(coc-format-selected)
+" xmap <leader>a  <Plug>(coc-codeaction-selected)
+" nmap <leader>a  <Plug>(coc-codeaction-selected)
 nnoremap <leader>tgc :Telescope git_commits<cr>
 nnoremap <leader>tcc :Telescope commands<cr>
 
