@@ -1,0 +1,10 @@
+rabin
+rajan 
+bishal
+rabin
+rajan 
+bishal
+
+"Hello" is in the "a" register
+"world" is in the "b" register
+Hello world

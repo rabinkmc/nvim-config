@@ -25,7 +25,7 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
 
-  use {'neoclide/coc.nvim', branch = 'release'}
+  -- use {'neoclide/coc.nvim', branch = 'release'}
   use 'rbgrouleff/bclose.vim'
   use 'francoiscabrol/ranger.vim'
   use "nvim-lua/popup.nvim"
@@ -69,14 +69,17 @@ return require('packer').startup(function()
   use 'fannheyward/telescope-coc.nvim'
   use 'tpope/vim-dispatch'
   use 'vim-test/vim-test'
-  use 'vim-airline/vim-airline'
-  -- use 'hrsh7th/cmp-nvim-lsp'
-  -- use 'hrsh7th/cmp-buffer'
-  -- use 'hrsh7th/cmp-path'
-  -- use 'hrsh7th/cmp-cmdline'
-  -- use 'hrsh7th/nvim-cmp'
+  --use 'vim-airline/vim-airline'
+  use 'Olical/conjure'
+  use 'Olical/aniseed'
 
-  -- lua snip
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+  use 'quangnguyen30192/cmp-nvim-ultisnips'
+-- Lua snip
   --use 'L3MON4D3/LuaSnip'
   --use 'saadparwaiz1/cmp_luasnip'
 end)
