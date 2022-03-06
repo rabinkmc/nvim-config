@@ -97,7 +97,9 @@ nnoremap <leader>tgc :Telescope git_commits<cr>
 nnoremap <leader>tcc :Telescope commands<cr>
 
 "error format python  
-autocmd FileType python set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+autocmd FileType python setlocal efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+autocmd FileType python setlocal makeprg=python3\ % 
 let test#strategy="dispatch"
 nnoremap <leader>vt :Telescope find_files cwd=~/.config/nvim/<cr>
+noremap <f9> :Dispatch<cr>
 " let g:aniseed#env = v:true
