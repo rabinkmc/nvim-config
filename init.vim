@@ -36,14 +36,14 @@ set mouse=a
 colorscheme dracula
 
 nnoremap <leader>so :source $MYVIMRC<cr>
-nnoremap <leader>vr :e $MYVIMRC<cr>
+nnoremap <leader>vr :vs $MYVIMRC<cr>
 command Plug :e ~/.config/nvim/lua/plugins.lua
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>gf <cmd>Telescope git_files<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>lg <cmd>Telescope live_grep<cr>
-nnoremap <leader>tb <cmd>Telescope buffers<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
 " nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>to <cmd>Telescope oldfiles<cr>
 nnoremap <leader>tm <cmd>Telescope marks<cr>
@@ -101,5 +101,6 @@ autocmd FileType python setlocal efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%
 autocmd FileType python setlocal makeprg=python3\ % 
 let test#strategy="dispatch"
 nnoremap <leader>vt :Telescope find_files cwd=~/.config/nvim/<cr>
+noremap <f8> :make<cr>
 noremap <f9> :Dispatch<cr>
 " let g:aniseed#env = v:true
